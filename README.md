@@ -1,4 +1,4 @@
-# Projeto de Data Warehouse
+# Construindo um Data Warehouse (Data Engineering)
 
 ## Visão Geral
 
@@ -8,12 +8,10 @@ O projeto simula um cenário real de consolidação de dados provenientes de mú
 
 ## Requisitos do Projeto
 
-### Construindo um Data Warehouse (Data Engineering)
-
-#### Objetivo
+### Objetivo
 Desenvolver um data warehouse moderno usando o SQL Server para consolidar dados de vendas, permitindo a geração de relatórios analíticos e a tomada de decisões informadas.
 
-#### Especificações
+### Especificações
 - **Fontes de Dados**: Importar dados de dois sistemas de origem (ERP e CRM) fornecidos como arquivos CSV.
 - **Qualidade de Dados**: Corrigir e resolver problemas de qualidade de dados antes da análise.
 - **Integração**: Combinar ambas as fontes em um único modelo de dados fácil de usar, projetado para consultas analíticas.
