@@ -85,12 +85,11 @@ WHERE prd_end_dt < prd_start_dt;
 -- Check for Invalid Dates
 -- Expectation: No Invalid Dates
 SELECT 
-    NULLIF(sls_due_dt, 0) AS sls_due_dt 
-FROM bronze.crm_sales_details
-WHERE sls_due_dt <= 0 
-    OR LEN(sls_due_dt) != 8 
-    OR sls_due_dt > 20500101 
-    OR sls_due_dt < 19000101;
+    sls_due_dt 
+FROM silver.crm_sales_details
+WHERE sls_due_dt IS NULL
+    OR sls_due_dt > '2050-01-01' 
+    OR sls_due_dt < '1900-01-01';
 
 -- Check for Invalid Date Orders (Order Date > Shipping/Due Dates)
 -- Expectation: No Results
